@@ -8,5 +8,6 @@ npm start
 npm run json-serv
 ```
 
-## Dependency
+## Dependencies
 [Redux Form](https://redux-form.com/7.4.2/)
+[Json Server](https://github.com/typicode/json-server)
