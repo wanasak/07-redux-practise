@@ -3,7 +3,8 @@ import {
   GET_ARTISTS,
   GET_ARTISTS_ALL,
   GET_ARTIST_DETAILS,
-  CLEAR_ARTIST_DETAILS
+  CLEAR_ARTIST_DETAILS,
+  ADD_ARTIST
 } from './types';
 
 const URL = "http://localhost:3004";
@@ -46,4 +47,15 @@ export function clearArtistDetails() {
     type: CLEAR_ARTIST_DETAILS,
     payload: null
   };
+}
+
+export function addArtist(values, cb) {
+  const request = axios
+    .post(`${URL}/artists`, values)
+    .then((() => cb()));
+
+  return {
+    type: ADD_ARTIST,
+    payload: 'OK'
+  }
 }
